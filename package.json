@@ -1,5 +1,6 @@
 {
-  "name": "netflix-clone",
+  "name": "task_app",
+  "homepage": "https://Olypmanel.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,6 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy" : "gh-pages -d build",
+    "predeloy": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
