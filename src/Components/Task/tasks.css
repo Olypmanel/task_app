@@ -1,0 +1,21 @@
+section.each_tool {
+ min-width: 100px;
+ box-shadow: var(--box-shadow);
+ border: 1px solid cyan;
+ padding: 2rem;
+ margin: 1rem;
+ border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+section.each_tool * {
+ margin: 5px;
+}
+.links {
+ color: inherit;
+ text-decoration: none;
+}
+h1.each_task {
+ text-transform: capitalize;
+}

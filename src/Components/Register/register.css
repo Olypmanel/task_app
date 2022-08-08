@@ -1,0 +1,90 @@
+.register_section {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ /* align-items: center; */
+}
+.register__top_bar {
+ margin-left: 3vw;
+ color: black;
+ /* background-color: var(--bg-color); */
+ width: 80vw;
+}
+h1.profile_title {
+ text-align: center;
+ margin-bottom: 4vh;
+}
+.profile_img_container {
+ height: 150px;
+ width: 140px;
+ border-radius: 50%;
+ border:cyan  solid 1px;
+ box-shadow: var(--box-shadow);
+ margin: auto;
+ position: relative;
+}
+.profile_image {
+ width: 100%;
+ object-fit: cover;
+ height: 100%;
+ border-radius: 50%;
+}
+#file{
+opacity: 0;
+}
+.file_label, #file {
+ position: absolute;
+ bottom: 6px;
+ left: 70%;
+ color: cyan;
+}
+label{
+ text-transform: capitalize;
+ display: block;
+ cursor: pointer;
+}
+input {
+ display: block;
+ height: 2.5rem;
+ width: 100%;
+ border-radius: 7px;
+ margin: 0.5rem 0 1.5rem 0;
+ outline: none;
+ padding: 1rem;
+ background-color: var(--bg-color);
+box-shadow: var(--box-shadow);
+border: cyan solid 1px;
+}
+form.profile_info {
+ margin-top: 1rem;
+ padding: 16px;
+ width: 80vw;
+ border-radius: 10px;
+ /* box-shadow: var(--box-shadow); */
+}
+button {
+box-shadow: var(--box-shadow);
+ display: block;
+ margin: auto;
+ margin-top: 2rem;
+ outline: none;
+ border: none;
+ width: 100%;
+ padding: 0.7rem;
+ border-radius: 10px;
+ font-size: 1.3rem;
+ font-weight: 700;
+ color: cyan;
+}
+.input_div{
+ position: relative;
+ margin-bottom: 20px;
+}
+.input_div p {
+ position: absolute;
+ bottom: -33px;
+ color: red;
+ font-size: 14px;
+ text-transform: capitalize;
+}

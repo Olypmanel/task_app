@@ -1,0 +1,35 @@
+div.header_div {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: cyan;
+ padding: 0 0.6rem;
+}
+
+div.links_div {
+ display: flex;
+ width: 200px;
+ justify-content: space-evenly;
+}
+img.image_profile  {
+ width: 60px;
+ height: 60px;
+ object-fit: cover;
+ border-radius: 50%;
+ border: cyan solid 1px ;
+ margin-right: 8px;
+ box-shadow: var(--box-shadow);
+
+}
+.image_user_name {
+ display: flex;
+ /* justify-content: center; */
+ align-items: center;
+}
+.user_name {
+ color: #eee;
+ text-transform: capitalize;
+ font-weight: 500;
+ font-size: 1.5rem;
+ text-shadow: var(--box-shadow);
+}
