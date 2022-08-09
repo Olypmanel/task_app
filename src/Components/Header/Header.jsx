@@ -13,6 +13,9 @@ function Header() {
       </div>
       <div className="links_div" >
        <Link to="/register">register</Link> 
+       <form className="reloader">
+          <button className="logout_btn" onClickCapture={() => localStorage.clear()}>log out </button>
+        </form>
        {/* <button onClick={()=> localStorage.clear()}>log out</button> */}
        {/* <Link to="/profile">profile</Link> */}
       </div>

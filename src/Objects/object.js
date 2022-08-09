@@ -133,11 +133,11 @@ const tools = [
         .map((item) => [...item].map((_item) => morseObj[_item]).join` `)
         .join`   `;
       setState(str);
-      console.log(morseObj);
       return str;
     },
   },
   {
+    id: "3",
     name: "human readable time",
     description:
       "Convert seconds to human readable time. e.g 2 years, 7 days and 1 second",
@@ -186,6 +186,7 @@ const tools = [
     },
   },
   {
+    id: "4",
     name: "most frequent words",
     description:
       "Enter bunch of words to return top three most frequent words ",

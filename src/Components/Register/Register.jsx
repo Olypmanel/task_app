@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import "./register.css"
 import { useUserInfo } from '../../Context/context'
+import {Link} from "react-router-dom"
 const regEx = {
   user_name: /^[a-z]{3,}\d*$/i,
   name: /^[a-z]{3,}\s[a-z]{3,}$/i,
@@ -10,8 +11,9 @@ const regEx = {
 function Register() {
   const [state, dispatch] = useUserInfo()
   const [user, setUser] = useState({name:'', user_name:'',password:'',email: "",photo: state.user.photo})
-  const [ver,setVer] = useState('')
+  const [ver,setVer] = useState([])
  const [isIt,setIsIt] = useState(false)
+ const [dashboard,setDashboard] = useState(false)
  const file = document.querySelector("#file");
   if (isIt) {
    file?.addEventListener("change", function () {
@@ -28,19 +30,20 @@ function Register() {
   }
  const handleSubmit = e =>{
   e.preventDefault()
+  setDashboard(()=> false)
   const ARRAY = []
   for(let reg in regEx) ARRAY.push(regEx[reg].test(user[reg]))
  if (ARRAY.every(item => item)){
    dispatch({type: "SET_USER", payload: user})
    localStorage.setItem('user', JSON.stringify(user))
-  setUser((prevState)=>({...prevState, name:'',user_name:'',password:'',email: ""}))
+  setDashboard(()=> true)
   }
   setVer(ARRAY)
  }
   return (
     <section className="register_section">
 <header className="register__top_bar">
- <h1 className='profile_title'>Set your profile</h1>
+ <h1 className="profile_title">Set your profile</h1>
 <section className="profile_img_container">
  <img src={user.photo} alt="profile" className='profile_image'/>
  <input type="file" id="file" accept='image/png, image/jpg, image/svg' onClick={()=>setIsIt(prev=>true)} />
@@ -66,7 +69,10 @@ function Register() {
 <input type="password" id='password' name='password'  onChange={(e)=>handleChange(e)} value={user.password}/>
 {ver[2] === false && <p>password is not strong enough</p>}
 </div>
-<button>submit</button>
+<button style={{padding: !dashboard&& "0.7rem"}}>{dashboard ? <Link to="/" className="btn_link">submit</Link> :"submit"}</button>
+<div className="login_links_cont">
+<Link to="/login" className="login_link">have an account, login instead</Link>
+</div>
 </form>
 </header>
 </section>

@@ -1,0 +1,23 @@
+section.login_page {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 90vh;
+}
+div.login_links_cont {
+ margin-top: 1rem;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+}
+.login_link {
+ text-decoration: none;
+ color: rgb(2, 69, 69);
+ text-transform: capitalize;
+ text-shadow: var(--box-shadow);
+}
+h1.login_title {
+ width: 79%;
+ margin-top: 2rem;
+}
